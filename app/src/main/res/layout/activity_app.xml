@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/customDate">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:scrollbars="horizontal"
+            android:layout_above="@id/bottom_navigation"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:text="Apps"
+                android:textSize="30sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="5sp"
+                android:autoSizeMaxTextSize="40sp"
+                android:autoSizeStepGranularity="5sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="Suggested for you"
+                android:autoSizeTextType="uniform"
+                android:textSize="12sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/app_recycle_view_horizontal"
+                android:scrollbars="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@color/white"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="Top Apps"
+                android:autoSizeMinTextSize="2sp"
+                android:autoSizeMaxTextSize="25sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:textSize="12sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/app_recycle_view_grid"
+                android:scrollbars="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="9"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:background="@color/white"
+                />
+        </LinearLayout>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

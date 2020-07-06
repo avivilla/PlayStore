@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="12"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/bottom_navigation"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/current_date"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:text="Wednesday 2 MAY"
+        android:textColor="@color/customDate"
+        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:paddingTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:text="Today"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/profileimage"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:scrollbars="vertical"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:id="@+id/today_recycle_view"/>
+
+
+</LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+
+        >
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>

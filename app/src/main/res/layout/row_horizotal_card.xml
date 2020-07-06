@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_horizotal_card_linear_layout1"
+    android:layout_width="120dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:paddingLeft="5dp"
+    >
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="10dp"
+        >
+        <ImageView
+            android:id="@+id/horizontal_card_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/cardbg"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/horizontal_card_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="5sp"
+        android:autoSizeMaxTextSize="15sp"
+        android:autoSizeStepGranularity="5sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:text="Player Unknown BattleGround "/>
+    <TextView
+        android:id="@+id/horizontal_card_size"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:text="6 MB"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="5sp"
+        android:autoSizeMaxTextSize="15sp"
+        android:autoSizeStepGranularity="1sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+      />
+
+</LinearLayout>

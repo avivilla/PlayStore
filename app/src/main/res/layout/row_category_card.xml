@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/row_category_linear_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="220dp"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:weightSum="4.2"
+    >
+    <TextView
+        android:id="@+id/row_category_card_top_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:text="Category 1"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_recycle_view_top_chart_category"
+        android:scrollbars="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3.4"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:background="@color/white"
+        />
+
+</LinearLayout>
